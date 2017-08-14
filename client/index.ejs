@@ -8,17 +8,15 @@
     </head>
     <body>
         <h1>Hello!</h1>
-        <div class="abilities">
-            <h3>Abilities</h3>
-        </div>
-        <div class="speed">
-            <h3>Speed</h3>
-        </div>
-        <div class="attack">
-            <h3>Attack</h3>
-        </div>
-        <div class="moves">
-            <h3>Moves</h3>
-        </div>
+        <form class="" action="index.html" method="post">
+            <input id="search_term" type="search" placeholder="Search">
+        </form>
+        <script type="text/javascript">
+            function activatePlacesSearch() {
+                let input = document.getElementById('search_term');
+                let autocomplete = new google.maps.places.Autocomplete(input);
+            }
+        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv2asEHOwHeEb1a5I5mqmljY8cLc8bJwc&libraries=places&callback=activatePlacesSearch"></script>
     </body>
 </html>
